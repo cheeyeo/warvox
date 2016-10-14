@@ -17,7 +17,7 @@ WarVOX requires PostgreSQL 9.1 or newer with the "contrib" package installed for
 
 To get started, install the OS-level dependencies:
 
-	$ sudo apt-get install gnuplot lame build-essential libssl-dev libcurl4-openssl-dev \ 
+	$ sudo apt-get install gnuplot lame build-essential libssl-dev libcurl4-openssl-dev \
 	  postgresql postgresql-contrib postgresql-common git-core curl libpq-dev sox
 
 Install RVM to obtain Ruby 2.2.5 or later
@@ -31,7 +31,7 @@ After RVM is installed you need to run the rvm script provided
 In case you have not installed Ruby 2.2.5 or later by now, do so using RVM.
 
 	$ rvm install ruby-2.2.5
-        
+
 Clone this repository to the location you want to install WarVOX:
 
 	$ git clone git://github.com/rapid7/warvox.git /opt/warvox
@@ -64,7 +64,7 @@ Copy the example secrets configuration to secrets.yml:
 
 	$ cp config/secrets.yml.example config/secrets.yml
 
-Create a new secrect token: 
+Create a new secrect token:
 
 	$ rake secret > config/session.key
 
@@ -80,11 +80,11 @@ Add an admin account to WarVOX
 
 Start the WarVOX daemons:
 
-	$ bin/warvox.rb 
+	$ bin/warvox
 
 or to bind WarVox to all interfaces:
 
-	$ bin/warvox.rb --address 0.0.0.0
+	$ bin/warvox --address 0.0.0.0
 
 Access the web interface at http://127.0.0.1:7777/
 
