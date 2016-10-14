@@ -72,7 +72,7 @@ if opts['Background']
 end
 
 
-trap("SIGINT") { stop() }
+trap("SIGINT") { Thread.new{ stop } }
 
 $browser_url   = "http://#{opts['ServerHost']}:#{opts['ServerPort']}/"
 
